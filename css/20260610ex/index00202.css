@@ -1,0 +1,25 @@
+/* 
+클래스 선택자
+클래스 선택자란, HTML 문서의 요소(element)의 클래스 이름 기준으로
+스타일하는 선택자 입니다.
+https://hoazzinews.tistory.com/100
+
+*/
+
+/* 
+-기본문법
+-클래스 이름 {
+  속성 : 속성값;
+
+*/
+
+.div_class_name01 {
+
+   color:red;
+}
+
+.div_class_name02 {
+
+
+   font-size: 1.2em;
+}

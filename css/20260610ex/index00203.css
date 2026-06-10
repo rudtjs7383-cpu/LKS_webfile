@@ -1,0 +1,58 @@
+/* 
+속성 선택자
+속성 선택자란, HTML 요소 중에서 특정 속성을 갖고 있는 요소를 선택해서
+스타일을 적용하는 선택자 입니다.
+
+*/
+/* 
+기본문법
+[속성이름] {
+    속성:속성값
+
+
+
+*/
+input[type="text"] {
+
+    color: red;
+
+}
+input[placeholder="Input New ID"] {
+
+
+    color: red;
+
+
+}
+input[type="email"]{
+
+  font-size: 1.2em;
+}
+
+[value = "sign-up"]{
+
+  font-weight: bold;
+}
+/* a[href = 'https://www.google.com'] { */
+  /* text-decoration:none; */
+  /* color:red; */
+  /* font-size: 1.2em; */
+  /* font-weight: bold; */
+/* } */
+
+a{
+    text-decoration:none;
+    color:red; 
+    font-size: 1.2em; 
+    
+
+}
+/* a[href = 'https://www.naver.com']{ */
+    /* font-size: 1.2em; */
+/*  */
+/*  */
+/* } */
+
+a.naver{
+font-size: 1.2em;
+}

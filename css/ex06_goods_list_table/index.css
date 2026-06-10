@@ -1,0 +1,26 @@
+
+#wrap {
+    width: 345px;
+    margin: 0 auto;
+}
+#wrap > table {
+    border-collapse: collapse;
+    
+}
+
+#wrap > table > tbody > tr > td {
+    padding: 12px 4px;
+    
+}
+/* td 안에 인덱스 값을 찾아주는것을 nth-child라고합니다. */
+#wrap > table > tbody > tr > td div:nth-child(1) img {
+    min-width: 107px;
+    max-width: 107px;
+}
+#wrap > table > tbody > tr > td div:nth-child(2) p {
+    font-size: 0.85em;
+    text-align: center;
+}
+#wrap > table > tbody > tr > td div:nth-child(2) p:nth-child(1) {
+    font-weight: bold;
+}

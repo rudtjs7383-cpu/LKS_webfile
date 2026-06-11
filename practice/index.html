@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Board </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            color: #333333;
+            background-color: #ffffff;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        #board_wrap {
+            width: 1000px;
+            margin: 50px auto;
+        }
+
+        #board_wrap h2 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .title_line {
+            border: none;
+            border-top: 1px dashed #ccc;
+            margin-bottom: 30px;
+        }
+
+        .board_table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .board_table th {
+            background-color: #f8f9fa;
+            border-top: 1px solid #dadada;
+            border-bottom: 1px solid #dadada;
+            padding: 14px 0;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .board_table td {
+            border-bottom: 1px solid #eee;
+            padding: 14px 5px;
+            color: #444;
+        }
+
+        .col_no { width: 7%; }
+        .col_title { width: 55%; }
+        .col_author { width: 15%; }
+        .col_date { width: 15%; }
+        .col_like { width: 8%; }
+
+        .board_table td.txt_left {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .board_table tbody td:nth-child(3),
+        .board_table tbody td:nth-child(4) {
+            border-left: 1px solid #f0f0f0;
+            border-right: 1px solid #f0f0f0;
+        }
+
+        .board_table tbody tr {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .board_table tbody tr:hover {
+            background-color: #f9fbfd;
+            transform: translateX(4px);
+        }
+
+        .board_table tbody tr.active {
+            background-color: #e6f7ff !important;
+        }
+
+        .btn_area {
+            text-align: right;
+            margin-top: 15px;
+        }
+
+        .btn_write {
+            background-color: #4baed4;
+            color: white;
+            border: none;
+            padding: 9px 18px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn_write:hover {
+            background-color: #3ca0c6;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="board_wrap">
+        <h2>Notice board</h2>
+        <hr class="title_line">
+
+        <table class="board_table">
+            <thead>
+                <tr>
+                    <th class="col_no">No</th>
+                    <th class="col_title">제목</th>
+                    <th class="col_author">글쓴이</th>
+                    <th class="col_date">작성일</th>
+                    <th class="col_like">좋아요</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10</td>
+                    <td class="txt_left">네이버 지도(ver.5) 임베드</td>
+                    <td>Hong Gildong</td>
+                    <td>2021.12.15</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="txt_left">구글 지도 게시물 임베드 하기</td>
+                    <td>Park Chanho</td>
+                    <td>2021.12.13</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="txt_left">아이폰 업데이트</td>
+                    <td>Park Chanho</td>
+                    <td>2021.12.12</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="txt_left">Android Update ver.14</td>
+                    <td>Bak seri</td>
+                    <td>2021.12.10</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="txt_left">AWS Update Notice</td>
+                    <td>Lee seungyeop</td>
+                    <td>2021.12.10</td>
+                    <td>7</td>
+                </tr>  
+                <tr>
+                    <td>5</td>
+                    <td class="txt_left">Server disability notice</td>
+                    <td>Bak seri</td>
+                    <td>2021.12.9</td>
+                    <td>5</td>
+                </tr>    
+                <tr>
+                    <td>4</td>
+                    <td class="txt_left">Spring Framework study notice</td>
+                    <td>Bak seri</td>
+                    <td>2021.12.9</td>
+                    <td>2</td>
+                </tr>    
+                <tr>
+                    <td>3</td>
+                    <td class="txt_left">Spring MVC structure</td>
+                    <td>Lee seungyeop</td>
+                    <td>2021.11.30</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="txt_left">ReactJS version notice</td>
+                    <td>Hong Gildong</td>
+                    <td>2021.11.29</td>
+                    <td>20</td>
+                </tr>        
+                <tr>
+                    <td>1</td>
+                    <td class="txt_left">Javascript study notice</td>
+                    <td>Hong Gildong</td>
+                    <td>2021.11.15</td>
+                    <td>11</td>
+                </tr>        
+            </tbody>
+        </table>
+
+        <div class="btn_area">
+            <button type="button" class="btn_write">글쓰기</button>
+        </div>
+    </div>
+
+    <script>
+        const rows = document.querySelectorAll('.board_table tbody tr');
+        rows.forEach(row => {
+            row.addEventListener('click', () => {
+                rows.forEach(r => r.classList.remove('active'));
+                row.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

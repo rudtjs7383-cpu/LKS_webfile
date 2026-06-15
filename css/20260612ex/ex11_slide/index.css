@@ -1,0 +1,103 @@
+#wrap {
+    width: 1450px;
+    margin: 10px auto;
+}
+
+#wrap div.slide_wrap {
+    position: relative;
+    top: 0; left: 0;
+    border-top: 1px dashed #dadada;
+    border-bottom: 1px dashed #dadada;
+    padding: 50px 0;
+}
+
+/* ★ 추가: li들을 가로로 나열하기 위해 부모인 ul에 Flex 적용 */
+#wrap div.slide_wrap ul {
+    display: flex;          /* 가로 정렬 시작 */
+    flex-direction: row;    /* 왼쪽에서 오른쪽으로 나열 */
+    justify-content: center; /* 아이템들을 가운데로 모음 (선택사항) */
+    list-style: none;       /* 리스트 점(•) 제거 */
+    padding: 0;
+    margin: 0;
+}
+
+/* ★ 수정: li 요소가 flex 안에서 찌그러지지 않게 설정 */
+#wrap div.slide_wrap ul li.item_wrap {
+    position: relative;
+    top: 0; left: 0;
+    margin: 0 20px;
+    flex-shrink: 0;         /* 이미지가 좁아져서 찌그러지는 현상 방지 */
+}
+
+#wrap div.slide_wrap ul li.item_wrap div.thum img {
+    min-width: 250px;
+    max-width: 250px;
+    height: 250px;          /* ★ 추가: 이미지를 완벽한 원형으로 만들기 위해 높이 고정 */
+    object-fit: cover;      /* ★ 추가: 이미지 비율이 깨지지 않게 채우기 */
+    border-radius: 125px;
+}
+
+#wrap div.slide_wrap ul li.item_wrap div.goods_info {
+    width: 250px;
+    text-align: center;
+}
+
+#wrap div.slide_wrap ul li.item_wrap div.goods_price {
+    width: 250px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#wrap div.slide_wrap ul li.item_wrap div.goods_price span {
+    font-weight: normal;
+    font-size: .7em;
+}
+
+/* ★ 수정: 순위 숫자(div.no)가 원형 이미지 정중앙에 이쁘게 들어가도록 수정 */
+#wrap div.slide_wrap ul li.item_wrap div.no {
+    position: absolute;
+    top: 0; left: 0;
+    width: 50px; 
+    height: 50px;
+    line-height: 50px;      /* ★ 추가: 세로 정렬을 위해 글자 높이 맞춤 */
+    border-radius: 25px;
+    text-align: center;
+    background-color: #00c01e;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+#wrap div.slide_wrap ul li.item_wrap div.sticker{
+    position: absolute;
+    top: 0; left: 40px;
+
+}
+#wrap div.slide_wrap ul li.item_wrap div.sticker img{
+    min-width: 50px;
+    max-width: 50px;
+    border-radius: 25px;
+}
+
+
+
+#wrap div.slide_wrap > div.left_arrow,
+#wrap div.slide_wrap > div.right_arrow{
+    width: 50px; height: 50px;
+    position: absolute;
+    top: 150px; left: 1425px;
+    border: 2px solid #dadada;
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+
+#wrap div.slide_wrap > div.left_arrow{
+    left: -25px;
+}
+#wrap div.slide_wrap > div.left_arrow img,
+#wrap div.slide_wrap > div.right_arrow img {
+    min-width: 50px;
+    max-width: 50px;
+    border-radius: 25px;
+}

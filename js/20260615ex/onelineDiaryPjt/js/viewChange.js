@@ -5,11 +5,6 @@ const WRITE_VIEW        = 4;
 const LIST_VIEW         = 5;
 const HOME_VIEW         = 6;
 
-let signUpWrap = '';
-let signInWrap = '';
-let writeWrap = '';
-let listWrap = '';
-
 function initViews() {
     console.log('initViews() CALLED!!');
 

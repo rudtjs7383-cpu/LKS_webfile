@@ -7,6 +7,7 @@ a {
     text-decoration: none;
     color: #242424;
 }
+
 a:hover {
     text-decoration: underline;
 }
@@ -27,7 +28,7 @@ input.basic_input {
     border-radius: 7px;
 }
 
-input.basic_bitton {
+input.basic_button {
     width: 100px;
     padding: 10px;
     margin: 1px;
